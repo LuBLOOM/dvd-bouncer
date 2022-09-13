@@ -1,0 +1,14 @@
+#version 150 core
+
+uniform mat4 modelview;
+uniform mat4 projection;
+
+attribute vec2 vertex;
+attribute vec2 tex_vertex_in;
+varying vec2 tex_vertex;
+
+void main()
+{
+	tex_vertex = tex_vertex_in;
+        gl_Position = projection * modelview * vec4(vertex.xy, 0., 1.);
+}

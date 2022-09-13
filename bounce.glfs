@@ -1,0 +1,20 @@
+#version 150 core
+
+in vec2 tex_vertex;
+uniform sampler2D texture;
+uniform int random;
+
+void main()
+{
+        vec4 colours[7];
+
+        colours[0] = vec4(0., 0., 0., 0.);
+        colours[1] = vec4(0., 0., 1., 0.);
+        colours[2] = vec4(0., 1., 0., 0.);
+        colours[3] = vec4(0., 1., 1., 0.);
+        colours[4] = vec4(1., 0., 0., 0.);
+        colours[5] = vec4(1., 0., 1., 0.);
+        colours[6] = vec4(1., 1., 0., 0.);
+
+        gl_FragColor = texture2D(texture, tex_vertex) + colours[random];
+}
