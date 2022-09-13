@@ -1,4 +1,4 @@
-#version 150 core
+#version 130
 
 in vec2 tex_vertex;
 uniform sampler2D texture;
@@ -8,7 +8,7 @@ void main()
 {
         vec4 colours[7];
 
-        colours[0] = vec4(0., 0., 0., 0.);
+        colours[0] = vec4(1., 0., 0., 0.);
         colours[1] = vec4(0., 0., 1., 0.);
         colours[2] = vec4(0., 1., 0., 0.);
         colours[3] = vec4(0., 1., 1., 0.);
